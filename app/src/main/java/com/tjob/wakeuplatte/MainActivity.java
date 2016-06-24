@@ -40,10 +40,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //brewCoffee method calls creates post class to send post request
     private void brewCoffee() {
         new PostClass(this).execute();
     }
 
+    //PostClass opens http connection and posts brewcoffeeTrue
     private class PostClass extends AsyncTask<String, Void, Void>{
         private final Context context;
 
